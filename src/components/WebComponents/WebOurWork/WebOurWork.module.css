@@ -1,0 +1,140 @@
+.web_work{
+    width: 100%;
+    max-width: 1140px;
+    padding: 4rem 0 6rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.web_work > h1{
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    font-family: var(--font-fam);
+    font-weight: 300;
+    margin-bottom: 2rem;
+    z-index: 2;
+}
+.web_work_cards_conteiner{
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    /*  */
+    gap: 20px;
+    /*  */
+} 
+.web_work_cards_conteiner::-webkit-scrollbar{
+    display: none;
+}
+.web_work_card{
+    width: 500px;
+    background-color:#000000;;
+    padding: 30px 20px 35px 20px;
+    border-radius: 5px;
+}
+.web_work_card > img{
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+.web_work_card > h2{
+    color: white;
+    font-family: var(--font-fam);
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: 300;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+    width: 400px;
+}
+.web_work_card > p{
+    color: white;
+    font-family: var(--font-fam);
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    max-width: 400px;
+    height: 120px;
+    line-height: 1.4;
+}
+.web_work_card a{
+    display: block;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-fam);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    background-color: var(--green);
+    border-radius: 5px;
+    text-decoration: none;
+    z-index: 3;
+    margin-top: 1.2rem;
+}
+/* del */
+.web_work_card > svg{
+    width: 260px;
+    height: 260px;
+    color: rgb(17, 17, 17);
+}
+/* del */
+
+@media screen and (max-width: 700px) {
+.web_work{
+    padding: 6rem 0 3rem 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-bottom: 2px solid rgb(104, 104, 104);
+}
+.web_work > h1{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+.web_work_cards_conteiner{
+    width: 100%;
+    gap: 1rem;
+} 
+.web_work_card{
+    width: 90%;
+    padding:1.6rem 1.5rem;
+}
+.web_work_card > h2{
+    color: white;
+    font-family: var(--font-fam);
+    font-size: 22px;
+    line-height: 22px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.3rem;
+    font-weight: 400;
+}
+.web_work_card > p{
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    max-width: 400px;
+    height: unset;
+    margin-bottom:1.5rem;
+}
+.web_work_card a{
+    width: 220px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+/* del */
+.web_work_card > svg{
+    width: 185px;
+    height: 185px;
+}
+/* del */
+}

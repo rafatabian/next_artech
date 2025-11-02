@@ -1,0 +1,133 @@
+
+.reviews_container{
+    width: 100%;
+    max-width: 1140px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+    gap: 20px;
+    row-gap: 80px;
+}
+
+.review_card{
+    width: 100%;
+    max-width: 366px;
+    min-height:260px;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 5px;
+}
+.review_card > img{  
+    border-radius: 50px;
+    margin-top: -70px;
+}
+.review_card > div:nth-child(2){
+  align-items: center;
+  margin: 10px 0;
+}
+.review_card > div:nth-child(2) > svg{
+    color: #ffdd00;
+    width:23px;
+    height:23px;
+    min-width: 23px;
+    min-height: 23px;
+}
+.review_card > p{
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    margin:6px 0 15px 0;
+    font-family: var(--font-fam);
+    font-size: 100%;
+    line-height: 1.4;
+}
+.review_card > h3{
+   font-family: var(--font-fam);
+   font-size: 1.2rem;
+   font-weight: 500;
+}
+.reviews_btn{
+    font-size: 1.2rem;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-fam);
+    font-weight: 500;
+    color: white;
+    background-color: var(--green);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-top: 2rem;
+    box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.review_card.hidden {
+  display: none;
+}
+@media screen and (max-width:700px){
+    .review_card.hidden {
+      display: block;
+    }
+.reviews_btn{
+    display: none;
+}
+    .reviews_container {
+        flex-wrap: nowrap;
+        overflow-x:scroll;
+        overflow-y: auto;
+        position: static;
+        height: 100%;
+        padding-top: 50px;
+        gap: 1rem;
+        justify-content: flex-start;
+        margin-top: 1.5rem;
+    }
+    .reviews_container::-webkit-scrollbar {
+        display: block;
+        width: 50vw;
+        height: 12px;
+        background: #e7e3da;
+        margin: 1rem auto 0 auto;
+        border-radius: 6px;
+    }
+    .reviews_container {
+        scrollbar-width: thin;
+        scrollbar-color: #b3a07a #e7e3da;
+    }
+    .reviews_container {
+        padding-bottom: 2.5rem;
+    }
+    .reviews_container::-webkit-scrollbar-thumb {
+        background: #b3a07a;
+        border-radius: 6px;
+    }
+    .reviews_container::-webkit-scrollbar-track {
+        background: #e7e3da;
+    }
+    .review_card {
+        max-width: 310px;
+        min-height: 273px;
+        flex-shrink: 0;
+        padding: 20px 1.5rem;
+    }
+
+    .review_card:last-child {
+        margin-right: 0;
+    }
+    .review_card > img{
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        margin-top: -50px;
+    }
+    .review_card > p{
+       font-size: 16px;
+    }
+}

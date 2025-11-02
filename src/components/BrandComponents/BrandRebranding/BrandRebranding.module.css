@@ -1,0 +1,166 @@
+.rebranding_section {
+  padding: 6rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom: 2px solid #ababab;
+}
+
+.rebranding_container {
+    width: 100%;
+  max-width: 1140px;
+  text-align: center;
+}
+
+.rebranding_title {
+    font-size: 50px;
+    font-family: var(--font-fam);
+    font-weight: 300;
+    margin-bottom: 2rem;
+    z-index: 2;
+}
+.card {
+  height: 100%;
+  min-height: 580px;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  padding: 1.5rem 2.5rem;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  background-color: #f9fafb;
+}
+
+.card_image {
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: auto;
+}
+
+.card_label {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-fam);
+}
+
+.card_description {
+  color: #444;
+  text-align: left;
+  font-size: 1rem;
+  font-family: var(--font-fam);
+}
+
+.card_benefits {
+    text-align: left;
+    font-family: var(--font-fam);
+    font-size: 17px;
+    margin-top: 1.5rem;
+    letter-spacing: 0.2px;
+}
+
+.card_benefits li {
+  margin-bottom: 0.5rem;
+  list-style: none;
+}
+
+.cta {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta_button {
+    display: block;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    background-color: var(--green);
+    font-family: var(--font-fam);
+    padding: 7px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    z-index: 3;
+    margin-top: 15px;
+}
+
+.cta_button:hover {
+  background-color: #1f2937;
+}
+@media (min-width: 768px) {
+  .rebranding_title {
+    font-size: 3rem;
+  }
+}
+.card_comparison {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .card_comparison {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width:700px){
+  .rebranding_section{
+    background-color: white;
+    padding: 6rem 0 3rem 0;
+  }
+  .rebranding_title {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 400;
+    max-width: unset;
+    margin: 0 0 1rem 0;
+    padding: 0 2rem;
+    text-align: left;
+}
+.card {
+  height: 100%;
+  min-height: unset;
+  border: unset;
+  border-radius: unset;
+  padding: 2rem;
+  box-shadow:unset;
+  background-color:white;
+}
+.card_comparison{
+  gap: unset;
+}
+.after_card{
+  background-color: white;
+}
+.card_image {
+  margin-bottom: 0.5rem;
+}
+.card_label {
+  text-align: left;
+}
+.card_label{
+  margin: 0;
+}
+.card_description{
+  margin-bottom: 1rem;
+}
+.cta{
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+margin: 0;
+padding-left: 2rem;
+}
+}

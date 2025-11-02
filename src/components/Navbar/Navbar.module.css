@@ -1,0 +1,311 @@
+.navbar_background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 98;
+    width: 100%;
+    height: 45px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.navbar_container{
+    width: 100%;
+    max-width: 1140px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    z-index: 99;
+    background-color: white;
+} 
+.navbar_background.navbar_background_dark{
+    background-color: black !important;
+}
+.navbar_dark .navbar_menu_icon{
+   background-color: black;
+}
+.navbar_dark{
+    color: white;
+    background-color: black !important;
+}
+.navbar_dark > svg{
+   color:white;
+} 
+.navbar_dark a{
+    color: white !important;
+}
+
+.navbar_shadowEffect{
+    content: "";
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    z-index: 99;
+}
+.navbar_logo{ 
+    height: 45px;
+    max-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
+}
+.navbar_logo > img{
+    height: 100%;
+    object-fit: contain;
+}
+.navbar_buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    height: 100%;
+    
+}
+.navbar_menu_icon{
+    border: none;
+    background-color: unset;
+}
+.navbar_menu_icon > svg{
+    padding: 5px;
+    width: 45px;
+    min-width: 45px;
+    height:45px;
+    min-height: 45px;
+    border-radius: 8px;
+    color: var(--green);
+    fill: white;
+}
+.navbar_close_icon{
+    border: none;
+    background-color: unset;
+    margin-right: 15px;
+}
+.navbar_close_icon > svg{
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    color: white;
+}
+
+.navbar_dark .navbar_buttons{
+    background-color: black;
+}
+.navbar_buttons > a{
+    text-decoration: none;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+/* language btns and container */
+.navbar_languages{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-right: 10px;
+}
+.navbar_language_btn_nonSelected{
+   margin: 0 3px;
+   background: transparent;
+   color: var(--green);
+   font-family: var(--font-fam);
+   font-size: 15px;
+   width: 40px;
+   border-radius: 40px;
+   height: 25px;
+   /* font-weight: 500; */
+   border: 1.5px solid var(--green);
+}
+.navbar_language_btn_activated{
+    margin: 0 3px;
+   color: white;
+   font-family: var(--font-fam);
+   font-size: 15px;
+   width: 40px;
+   height: 25px;
+   /* font-weight: 500; */
+   border-radius: 40px;
+    background-color: var(--green);
+}
+.show_menu_icon_clicked .navbar_languages{
+   margin-right: unset;
+   margin-bottom:15px;
+}
+.show_menu_icon_clicked .navbar_language_btn_activated{
+    background-color: white;
+    color: var(--green);
+}
+.show_menu_icon_clicked .navbar_language_btn_nonSelected{
+    border: 1.5px solid white;
+    color: white;
+}
+.navbar_buttons > a{
+    border: none;
+    background-color: unset;
+    text-decoration: none;
+    height: 100%;
+    font-size: 15px;
+    cursor: pointer; 
+    font-family: var(--font-fam);
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    padding: 0 10px;
+    color: black;
+    border-radius: 3px;
+} 
+/* testing */
+.navbar_buttons a[aria-current="page"] {
+    background-color: var(--green) !important;
+    color: white;
+}
+
+@media screen and (min-width:970px){
+    .navbar_menu_icon,
+    .navbar_close_icon{
+       display: none;
+    }
+}
+@media screen and (max-width:970px){
+    .navbar_background{
+        height: 54.5px;
+    }
+        .navbar_logo{
+        height: 42.5px;
+        max-height: 42.5px;
+        }
+    .navbar_logo > img{
+        height: 42.5px;
+    }
+    .navbar_buttons{
+        display: none;
+    } 
+    .navbar_buttons > a {
+        border: 1px solid white;
+        border-radius: 3px;
+        width: 200px !important;
+        height: 40px !important;
+        height: unset;
+        margin: 5px 0;
+        color: white;
+    }
+}
+.show_menu_icon_clicked{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--green);
+    border-radius: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    z-index: 98;
+    animation: left_scrolling_mobile_menu 0.4s ease forwards;
+} 
+.navbar_close_icon{
+    z-index: 99;
+    position: absolute;
+    right: 4rem;
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+/* .navbar_buttons .nav_focus_btn > button{
+    color: white !important;
+} */
+@keyframes left_scrolling_mobile_menu {
+    0%{
+        transform: translateX(100vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@media screen and (max-width:970px){
+    .navbar_container{
+        padding: 7.5px 15px 0 15px;
+        background-color: white;
+        top: 0;
+        padding:5px 15px;
+        height: unset;
+        border-bottom: 2px solid var(--green); 
+    }
+    .navbar_close_icon{
+        right: 15px;
+    }
+    .navbar_logo > img,
+    .navbar_menu_icon{
+        box-shadow: unset;
+    }
+    .navbar_buttons > a {
+        height: unset;
+        width: unset;
+    }
+}
+@media screen and (min-width: 700px) {
+    .navbar_logo > img:nth-child(2){
+    display: none;
+}
+}
+@media screen and (max-width: 700px) {
+.navbar_background{
+    box-shadow: unset;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(6px);
+    background-color: #fdfdfdd0;
+    height:48px
+}
+.navbar_container{
+    background-color: transparent;
+    position: relative;
+    border-bottom: unset;
+    padding: 0px 15px;
+}
+.navbar_logo > img:first-child{
+    display: none;
+}
+.navbar_logo > img:nth-child(2){
+    width: 65px;
+    height: 65px;
+    min-width: 65px;
+    min-height: 65px;
+}
+/* dark navbar styles */
+.navbar_background.navbar_background_dark{
+    background-color: #2e2e2ed0 !important;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(6px);
+}
+.navbar_dark{
+    background-color: transparent !important;
+}
+.navbar_menu_icon{
+    background-color: unset !important;
+    position: absolute;
+    right: 15px;
+}
+.navbar_dark .navbar_logo{
+     display: none;
+}
+}

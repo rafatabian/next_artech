@@ -1,0 +1,107 @@
+.help_container{
+    padding: 6rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    background-color: white;
+}
+.help_question_title{
+    width: 550px;
+}
+.help_img_container{
+    height: calc(100vh - 70px);
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.help_img_container > img{
+    max-width: 400px;
+    width: 400px;
+    position: fixed;
+}
+.help_question_title > h1{
+    font-size: 45px;
+    font-family: var(--font-fam);
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 1rem;
+    letter-spacing: 0.3px;
+
+}
+.help_question_title > h2{    
+    font-size: 23px;
+    font-family: var(--font-fam);
+    font-weight: 500;
+    color: white;
+    padding: 10px 15px;
+    letter-spacing: 0.3px;
+    margin-top: 40px;
+    background-color: var(--green);
+    border-radius: 5px;
+    max-width: 520px;
+}
+
+.help_img_dissapear{
+animation: help_img 0.3s forwards;
+}
+.help_img_appear{
+    animation: help_img_appear 0.3s forwards
+}
+@keyframes help_img {
+    0%{
+        opacity: 1;
+        scale: 1;
+    }
+    100%{
+        opacity: 0;
+        scale: 0.5;
+    }
+}
+@keyframes help_img_appear {
+    0%{
+        scale: 0.5;
+        opacity: 0;
+    }
+    100%{
+        scale: 1;
+        opacity: 1;
+    }
+}
+@media screen and (max-width:1000px){
+    .help_container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 6rem 15px;
+    }
+    .help_question_title{
+        width: unset;
+    }
+    .help_img_container{
+        height: 100%;
+        padding: 2rem 0
+    }
+    .help_img_container > img{
+        position: unset;
+    }
+}
+@media screen and (max-width: 550px){
+    .help_img_container{
+        width: unset;
+    }
+    .help_img_container > img{
+        max-width: 250px;
+        width: 100%;
+        height: auto;
+    }
+    .help_question_title > h1{
+        line-height: 50px;
+        font-size: 35px;
+    }
+    .help_title_spacing{
+        margin-top: 4rem !important;
+    }
+}

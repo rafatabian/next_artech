@@ -1,0 +1,48 @@
+.question_container{
+    max-width: 520px;
+    width: 100%;
+    min-width: 300px;
+    animation: 1s;
+    padding: 20px 10px;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.question_container > div > div:first-child{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    cursor: pointer;
+    user-select: none;
+}
+.question_container > div > div:first-child > p{
+    font-family: var(--font-fam);
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #333333;
+    letter-spacing: 0.2px;
+}
+.question_container > div > div:first-child > svg{
+   width: 22px;
+   height: 22px;
+   min-width: 22px;
+   min-height: 22px;
+   color: #666;
+}
+.help_answer{
+    margin-top:15px;
+}
+.help_answer > p{
+   font-family: var(--font-fam);
+   letter-spacing: 0.3px;
+   color: #333333;
+   font-size: 16px;
+   line-height: 25px;
+}
+.visible {
+  display: block;
+}
+.hidden {
+  display: none;
+}
