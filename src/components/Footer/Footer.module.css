@@ -87,14 +87,32 @@
    width: 280px;
    /* background-color: aqua; */
 }
-@media screen and (min-width: 700px) and (max-width: 1140px){
-    .footer_container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+@media screen and (max-width:1139px){
+.footer_content{
+    width: 100%;
+    max-width:550px;
+    margin: 0 auto;
+   flex-wrap: nowrap;
+   flex-direction: column;
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+}
+.footer_links_column,
+.footer_last_column{
+    align-items: flex-start;
+}
+.footer_container > h1{
+    width: 100%;
+    max-width: 550px;
+    margin: 2rem auto;
+}
+.footer_form_column{
+    width: 100%;
+    max-width: unset;
 }
 }
+
 @media screen and (max-width:700px){
 .footer_background {
     align-items: flex-start;

@@ -3,18 +3,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e9e9e9;
-    border-bottom: 2px solid #ababab;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ababab;
 }
 .marketing_graps_container{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     max-width: 1140px;
     height: 100%;
-    padding: 6rem 0  7rem 0;
+    padding: 8rem 0  10rem 0;
 }
 .marketing_graps_container > h1{
     font-family: var(--font-fam);
@@ -24,15 +24,17 @@
     letter-spacing: -1px;
     margin-bottom: 0.5rem;
     line-height: 50px;
-    margin-bottom: .5rem;
-    text-align: center;
+    margin-bottom: .8rem;
+    width: 100%;
 }
 .marketing_graps_container > p{
-    font-family: var(--fontFam);
-    text-align: center;
-    font-size: 1.3rem;
+    font-family: var(--font-fam);
+    width: 100%;
+    font-size: 1.1rem;
+    line-height: 24px;
     font-weight: 400;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
 }
 .markeging_graphs_numbers_container{
     display: flex;
@@ -67,11 +69,13 @@
 }
 @media screen and (max-width:1139px){
     .marketing_graps_container{
-        max-width: 600px;
+        padding: 3rem 0;
+        max-width: 550px;
     }
     .marketing_graps_container > h1{
     width: 100%;
     text-align: start;
+    font-size: 45px;
 }
 .marketing_graps_container > p{
    width: 100%;
@@ -92,7 +96,7 @@
         margin: 1.2rem 0;
     }
     .marketing_graphs_bar_container{
-        width: 600px;
+        width: 550px;
         max-width: none;
     }
     .markeging_graphs_numbers_container > div > p{
@@ -102,29 +106,27 @@
 
 }
 @media screen and (max-width:700px){
-    .marke_graph_background{
-        padding: 6rem 2rem 3rem 2rem;
-        border-bottom: 2px solid #ababab;
+    .markeging_graphs_numbers_container{
+   display: block;
     }
     .marketing_graps_container{
-        padding: unset;
+        padding: 3rem 1rem;
+        gap: unset;
     }
     .marketing_graps_container > h1{
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 35px;
+    line-height: 37px;
     font-weight: 400;
-    letter-spacing: 0.3px;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
 }
 .marketing_graps_container > p{
-    font-size: 17px;
-        line-height: 1.25;
-        font-family: var(--font-fam);
+        font-size: 18px;
+        line-height: unset;
         font-weight: 400;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
 }
 .marketing_graphs_bar_container{
-        width: calc(100vw - 4rem);
+        width: 100%;
         max-width: none;
     }
 

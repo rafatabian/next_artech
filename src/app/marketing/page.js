@@ -37,14 +37,15 @@ export const metadata = {
 
 import MarketingGraph from "../../components/MarkeComponents/MarketingGraph/MarketingGraph.jsx"
 import MarkeIntro from "../../components/MarkeComponents/MarkeIntro/MarkeIntro.jsx"
-import MarkeIssues from "../../components/MarkeComponents/MarkeIssue/MarkeIssue.jsx"
-import MarkeSolution from "../../components/MarkeComponents/MarkeSolution/MarkeSolution.jsx"
-import MarkeSteps from "../../components/MarkeComponents/MarkeSteps/MarkeSteps.jsx"
-import MarkeStory from "../../components/MarkeComponents/MarkeStory/MarkeStory.jsx"
+import MarkeIssues from "../../components/MarkeComponents/MarkeGrowthAcce/MarkeGrowthAcce.jsx"
+import MarkeSolution from "../../components/MarkeComponents/MarkeWhatGet/MarkeWhatGet.jsx"
+import MarkeSteps from "../../components/MarkeComponents/MarkeMiniPain/MarkeMiniPain.jsx"
+import MarkeStory from "../../components/MarkeComponents/MarkeGuarantee/MarkeGuarantee.jsx"
 import MarkeMotivational from "../../components/MarkeComponents/MarkeMotivational/MarkeMotivational.jsx"
-import MarkeServices from "../../components/MarkeComponents/MarkeServices/MarkeServices.jsx"
-
-
+import MarkeEducational from "../../components/MarkeComponents/MarkeEducational/MarkeEducational.jsx"
+import MarkeWhyUs from "../../components/MarkeComponents/MarkeWhyUs/MarkeWhyUs.jsx";
+import MarkeReviews from "../../components/HomeComponents/Home_reviews/Home_reviews.jsx"
+import MarkeUnforgettable from "../../components/MarkeComponents/MarkeUnforgettable/MarkeUnforgettable.jsx"
 
 export default function HomeMarketing() {
 
@@ -54,9 +55,12 @@ export default function HomeMarketing() {
         <MarkeIssues />
         <MarkeSolution />
         <MarkeSteps />
-        <MarkeServices />
+        <MarkeEducational />
         <MarkeStory />
         <MarketingGraph />
+        <MarkeWhyUs />
+        <MarkeReviews />
+        <MarkeUnforgettable/>
         <MarkeMotivational />
       </div>
   );

@@ -71,7 +71,7 @@
 .review_card.hidden {
   display: none;
 }
-@media screen and (max-width:700px){
+@media screen and (max-width:1139px){
     .review_card.hidden {
       display: block;
     }
@@ -88,6 +88,7 @@
         gap: 1rem;
         justify-content: flex-start;
         margin-top: 1.5rem;
+        max-width: 550px;
     }
     .reviews_container::-webkit-scrollbar {
         display: block;
@@ -129,5 +130,10 @@
     }
     .review_card > p{
        font-size: 16px;
+    }
+}
+@media screen and (max-width:700px){
+    .reviews_container{
+        margin-top: 0.5rem;
     }
 }

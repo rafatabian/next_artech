@@ -1,0 +1,184 @@
+.marke_solubion_background{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 7rem 0;
+     -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    /* background-color: rgb(244, 244, 244); */
+     -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.marke_solution_container{
+    width: 100%;
+    max-width: 1140px;
+    display: flex;
+    flex-direction: column;
+}
+.marke_solution_container > h1{
+    font-size: 50px;
+    width: 100%;
+    max-width: 500px;
+    font-family: var(--font-fam);
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+.marke_solution{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    /* border-top: 2px solid rgb(219, 219, 219); */
+    background-color: white;
+    padding: 0rem 2rem 0rem 0;
+    margin: 10px 0;
+    border-radius: 3px;
+    position: relative;
+    height: 100%;
+    min-height: 160px;
+    box-shadow: 0 4px 4px #0003;
+}
+.marke_solution > img{
+    height: auto;
+    /* border-radius: 5px; */
+    position: absolute;
+}
+.marke_solution_container div:nth-child(2) > img{
+    left: 0;
+}
+.marke_solution_container div:nth-child(3) > img{
+    left: -9px;
+}
+.marke_solution_container div:nth-child(4) > img{
+    left: -28;
+}
+.marke_solution_container div:nth-child(5) > img{
+    left: -18;
+}
+.marke_solution_container div:nth-child(6) > img{
+    left: 18;
+}
+
+.marke_solution > h2{
+    width: 100%;
+    max-width: 220px;
+    font-size: 26px;
+    font-family: var(--font-fam);
+    font-weight: 400;
+    line-height: 25px;
+    color: #333;
+    margin-left: 250px;
+}
+.marke_solution > p{
+    width: 100%;
+    max-width: 600px;
+    font-size: 17px;
+    font-family: var(--font-fam);
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.1px;
+}
+
+@media screen and (max-width:1139px){
+    .marke_solubion_background{
+     padding: 3rem 0;
+    }    
+    .marke_solution_container{
+     width: 100%;
+     max-width: 550px;
+     margin: 0 auto;
+    }
+    .marke_solution{
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+    }
+    .marke_solution_container > h1{
+        font-size: 45px;
+    }
+    .marke_solution > h2{
+        margin-left: unset;
+    }
+    .marke_solution > img{
+    top: 0;
+    left: unset !important;
+}
+.marke_solution > p{
+    max-width: 70%;
+}
+.marke_solution_container div:nth-child(2) > img{
+    right: -30px;
+    top: 20px;
+}
+.marke_solution_container div:nth-child(3) > img{
+    right: -36px;
+    top: -10px;
+}
+.marke_solution_container div:nth-child(4) > img{
+    right: -53;
+    top: -20px;
+}
+.marke_solution_container div:nth-child(5) > img{
+    right: -43;
+    top: 5px;
+}
+.marke_solution_container div:nth-child(6) > img{
+    right: -6;
+    top: 5px;
+}
+}
+@media screen and (max-width:700px){
+    .marke_solution_container > div:nth-last-child(2){
+    border-bottom: unset;
+}
+    .marke_solution{
+        overflow: hidden;
+        margin: 8px 0;
+    }
+    .marke_solution_container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem;
+    }
+   .marke_solution_container > h1{
+        font-size: 35px;
+        line-height: 37px;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+.marke_solution > p {
+    line-height: unset;
+    font-size: 16px;
+    max-width: calc(100vw - 2rem - 120px);
+}
+.marke_solution_container div:nth-child(2) > img{
+   right: -70px;
+}
+.marke_solution_container div:nth-child(3) > img{
+    right: -76px;
+}
+.marke_solution_container div:nth-child(4) > img{
+    right: -95;
+}
+.marke_solution_container div:nth-child(5) > img{
+    right: -83px;
+}
+.marke_solution_container div:nth-child(6) > img{
+    right: -45px;
+}
+.marke_solution > h2{
+    font-size: 24px;
+}
+    .marke_solution{
+        gap: .7rem;
+    }
+}
