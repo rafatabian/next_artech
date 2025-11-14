@@ -26,6 +26,7 @@ const FooterForm = () => {
       })
       .then(
         () => {
+          console.log(emailData)
           console.log("SUCCESS!");
           // Reset the form state to clear the inputs
           setEmailData(initialEmailData);

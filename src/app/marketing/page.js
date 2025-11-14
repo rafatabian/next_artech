@@ -46,6 +46,7 @@ import MarkeEducational from "../../components/MarkeComponents/MarkeEducational/
 import MarkeWhyUs from "../../components/MarkeComponents/MarkeWhyUs/MarkeWhyUs.jsx";
 import MarkeReviews from "../../components/HomeComponents/Home_reviews/Home_reviews.jsx"
 import MarkeUnforgettable from "../../components/MarkeComponents/MarkeUnforgettable/MarkeUnforgettable.jsx"
+import Newsletter from "../../components/Newsletter/Newsletter"
 
 export default function HomeMarketing() {
 
@@ -56,6 +57,7 @@ export default function HomeMarketing() {
         <MarkeSolution />
         <MarkeSteps />
         <MarkeEducational />
+        <Newsletter />
         <MarkeStory />
         <MarketingGraph />
         <MarkeWhyUs />
