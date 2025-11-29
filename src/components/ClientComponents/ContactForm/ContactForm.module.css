@@ -94,8 +94,7 @@ textarea::placeholder{
  width: 100%;
  display: flex;
  gap: 0.5rem;
- /* background-color: red; */
-     margin: 5px 0;
+    margin: 5px 0;
 }
 .input_date_time{
     color: #3f3f3f;
@@ -124,5 +123,13 @@ textarea::placeholder{
     .form{
     width: 100%;
     }
-
+}
+@media screen and (max-width:700px){
+.contact_desctiption > textarea, .input, .input_date_time{
+    color: black;
+    border: 1px solid rgb(0, 0, 0);
+}
+textarea::placeholder, .input::placeholder, .input_date_time::placeholder{
+  color: rgb(77, 77, 77);
+}
 }

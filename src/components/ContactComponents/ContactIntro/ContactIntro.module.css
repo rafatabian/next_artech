@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content:center;
+    background-color: transparent;
 }
 .contact_intro_container{
     width: 100%;
@@ -20,6 +21,7 @@
     width: 60%;
     padding: 3rem;
     box-shadow: 0 4px 4px #0002;
+    min-height: 470px;
 }
 .contact_intro_first > h1{
     font-size: 60px;
@@ -76,7 +78,7 @@
 .contact_intro_second{
     width: 40%;
     height: 100%;
-    min-height: 440px;
+    min-height: 470px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -106,6 +108,9 @@
     }
 }
 @media screen and (max-width:700px){
+    .contact_intro_first{
+        padding-top: 4.5rem !important;
+    }
 .contact_intro_first > h1{
     max-width: 350px;
     margin-bottom: 1rem;
@@ -123,6 +128,7 @@
     max-width: unset;
     padding: 2.5rem 1rem;
     box-shadow: unset;
+    min-height: unset;
 }
  .contact_intro_first > p{
     line-height: 1px;

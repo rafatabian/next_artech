@@ -6,9 +6,9 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    background-color: #efefef;
     padding: 2rem 0;
     padding-top: 110px;
+    background-color: #f2f2f7;
 }
 
 .contact_alternative_line {
@@ -89,7 +89,7 @@
 .contact_note > p{
     font-family: var(--font-fam);
     font-size: 15px;
-    color: #555555;
+    color: #000000;
     letter-spacing: 0.2px;
     display: flex;
     align-items: center;
@@ -114,7 +114,9 @@
 }
 @media screen and (max-width: 700px) {
     .contact_container{
-        background-color: white;
+        /* background-color: white; */
+        margin-top: 42.5px;
+        padding: 0;
     }
     .contact_phone_email {
         flex-direction: column;
