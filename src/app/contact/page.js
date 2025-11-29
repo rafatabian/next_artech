@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import { RiWhatsappFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
 import dynamic from "next/dynamic";
+import { FaCalendarAlt } from "react-icons/fa";
 
 // metadata
 export const metadata = {
@@ -39,8 +40,11 @@ export const metadata = {
 };
 
 // dynamic import
-const ContactForm = dynamic(() =>
-  import("../../components/ClientComponents/ContactForm/ContactForm")
+const ContactIntro = dynamic(() =>
+  import("../../components/ContactComponents/ContactIntro/ContactIntro")
+);
+const ContactFaq = dynamic(() =>
+  import("../../components/HomeComponents/Home_faq/Home_faq.jsx")
 );
 
 export default function Contact() {
@@ -48,13 +52,22 @@ export default function Contact() {
 
   return (
       <div className={styles.contact_container}>
-        <h1 className={styles.container_title}>Contact us</h1>
+          <ContactIntro />
 
+        {/* or */}
+        <div className={styles.contact_alternative_line}>
+          <p>or</p>
+        </div>
+
+        {/* alternative contact */}
         <div className={styles.contact_phone_email}>
           <div>
             <RiWhatsappFill />
             <span>
-              <a href={`tel:${"+44 7424 177 665"}`}>+44 7424 177 665</a>
+              <a href="https://wa.me/447424177665"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 >+44 7424 177 665</a>
             </span>
           </div>
           <div>
@@ -63,17 +76,12 @@ export default function Contact() {
               business@artech-agency.co
             </a>
           </div>
+            <div className={styles.contact_note}>
+          <p><FaCalendarAlt /> We only take on 5 new clients each month</p>
         </div>
-
-        <div className={styles.contact_alternative_line}>
-          <p>or</p>
         </div>
-
-        <div className={styles.contact_form}>
-          <h1>Please fill out the form, and we will get back to you as soon as possible.</h1>
-          {/* form */}
-         <ContactForm />
-        </div>
+        
+        <ContactFaq />
       </div>
   );
 }

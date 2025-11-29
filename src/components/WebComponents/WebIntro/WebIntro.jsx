@@ -15,7 +15,7 @@ const WebIntro = () => {
         </div>
         
         <div>
-          <Image width={500} height={380} src="/images/websites/web_intro.webp" alt="websites intro image" priority/>
+          <Image width={550} height={380} src="/images/websites/web_intro.webp" alt="websites intro image" priority/>
         </div>
       </div>
   )

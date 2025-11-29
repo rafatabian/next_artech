@@ -50,10 +50,10 @@
     cursor: pointer;
     text-align: start;
     padding: 0.5rem 1rem;
-    border-radius: 5px;
     font-size: 1.1rem;
     box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.2);
     font-family: var(--font-fam);
+    margin-top: -10px;
 
 }
 @media screen and (max-width:700px){

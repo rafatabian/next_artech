@@ -1,59 +1,33 @@
 "use client";
 
 import styles from "./ContactForm.module.css";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 
-// Lazy-load reCAPTCHA only when needed
-const LazyReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
-  ssr: false,
-  loading: () => <p>Loading verification...</p>,
-});
 
 export default function Contact() {
   const formRef = useRef();
   const [confirmation, setConfirmation] = useState(false);
-  const [captchaValue, setCaptchaValue] = useState(null);
-  const [loadCaptcha, setLoadCaptcha] = useState(false);
   const [emailData, setEmailData] = useState({
     tip_solicitare: "",
     planul: "",
     descriere: "",
+    day:"",
+    time:"",
     nume: "",
     telefon: "",
     email: "",
   });
 
-  // 🧠 Load reCAPTCHA only when user interacts with the form
-  useEffect(() => {
-    const handleScroll = () => {
-      const formTop = formRef.current?.getBoundingClientRect().top || 0;
-      if (formTop < window.innerHeight) {
-        setLoadCaptcha(true);
-        window.removeEventListener("scroll", handleScroll);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const handleSelectChange = (e) =>
-    setEmailData({ ...emailData, tip_solicitare: e.target.value });
-
-  const onChange = (value) => setCaptchaValue(value);
+// add bot blockers
 
   const sendEmail = (e) => {
     e.preventDefault();
-    if (!captchaValue) {
-      alert("Please confirm you're not a bot.");
-      return;
-    }
-
+    
     emailjs
-      .send("service_bxwwj7b", "template_85xbllk", emailData, {
-        publicKey: "zRB_M2l24GAb2ixBd",
+      .send("service_vztopwc", "template_lylcs4q", emailData, {
+        publicKey: "3EZTg7KvgmPiXOfnr",
       })
       .then(
         () => console.log("SUCCESS!"),
@@ -65,28 +39,20 @@ export default function Contact() {
 
   return (
     <>
-      <form onSubmit={sendEmail} ref={formRef}>
-        <div>
-          <label htmlFor="options">Your request is related to:</label>
-          <select
-            id="options"
-            onChange={handleSelectChange}
-            value={emailData.tip_solicitare}
-            required
-          >
-            <option value="">Select the reason for your request</option>
-            <option value="Branding">Branding</option>
-            <option value="Websites">Websites</option>
-            <option value="Marketing">Marketing</option>
-            <option value="Pachete">Plans</option>
-            <option value="Altceva">Other</option>
-          </select>
+     {confirmation ? (
+        <div className={styles.contact_confirmation}>
+          <img src="/images/navbar_white_logo.webp" alt="logo" />
+          <h1>Thank you for your time!</h1>
+          <h2>We’ll call you at your scheduled time.</h2>
         </div>
+      ) :
+      <form onSubmit={sendEmail} ref={formRef} className={styles.form}>
 
         <div className={styles.contact_desctiption}>
-          <label htmlFor="description">Give us some details</label>
+          <label htmlFor="description" className={styles.visually_hidden}>Give us some details</label>
           <textarea
             id="description"
+            placeholder="Describe your project, needs, or questions"
             onChange={(e) =>
               setEmailData({ ...emailData, descriere: e.target.value })
             }
@@ -94,14 +60,38 @@ export default function Contact() {
             required
           />
         </div>
+ 
+      <div className={styles.contact_date_time_container}>
+         <input
+        type="date"
+        name="day"
+        className={styles.input_date_time}
+        required
+        value={emailData.day}
+        onChange={(e) =>
+          setEmailData({ ...emailData, day: e.target.value })
+        }
+      />
+
+      <input
+        type="time"
+        name="time"
+        className={styles.input_date_time}
+        required
+        value={emailData.time}
+        onChange={(e) =>
+          setEmailData({ ...emailData, time: e.target.value })
+        }
+      />
+      </div>
 
         <div>
-          <h2>Personal Information</h2>
           <div>
-            <label htmlFor="name">First and Last Name:</label>
+            <label htmlFor="name" className={styles.visually_hidden}>First and Last Name:</label>
             <input
               id="name"
               type="text"
+              className={styles.input}
               placeholder="First and Last Name"
               required
               onChange={(e) =>
@@ -111,10 +101,11 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label htmlFor="phone">Phone number:</label>
+            <label htmlFor="phone" className={styles.visually_hidden}>Phone number:</label>
             <input
               id="phone"
               type="tel"
+               className={styles.input}
               placeholder="Phone number"
               required
               onChange={(e) =>
@@ -123,28 +114,6 @@ export default function Contact() {
               value={emailData.telefon}
             />
           </div>
-          <div>
-            <label htmlFor="email">Email Address:</label>
-            <input
-              id="email"
-              type="email"
-              placeholder="Email Address"
-              required
-              onChange={(e) =>
-                setEmailData({ ...emailData, email: e.target.value })
-              }
-              value={emailData.email}
-            />
-          </div>
-
-          <span className={styles.reCaptcha}>
-            {loadCaptcha && (
-              <LazyReCAPTCHA
-                sitekey="6Lerc1krAAAAAFFsnPwl5woNWd0N2DNg29mepHKF"
-                onChange={onChange}
-              />
-            )}
-          </span>
 
           <label htmlFor="privacy" className={styles.contact_privacy_label}>
             <input type="checkbox" id="privacy" required defaultChecked={false} />
@@ -154,22 +123,12 @@ export default function Contact() {
               and I acknowledge the <Link href="/privacy">Privacy Policy</Link>
             </span>
           </label>
-          <p>
-            By pressing the 'Submit Form' button, you confirm that your
-            information are accurate and complete.
-          </p>
         </div>
 
-        <button type="submit">Submit Form</button>
+        <button type="submit" className={styles.contact_button}>Book my free call</button>
       </form>
+}
 
-      {confirmation && (
-        <div className={styles.contact_confirmation}>
-          <img src="/images/navbar_white_logo.webp" alt="logo" />
-          <h1>Thank you for your time!</h1>
-          <h2>We will be back asap</h2>
-        </div>
-      )}
     </>
   );
 }
