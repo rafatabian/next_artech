@@ -11,7 +11,7 @@ const MarkeIntro = () => {
         <Image width={550} height={400} src="/images/marketing/marke_intro_two.jpg" alt="Marketing Intro" className="marke_intro_image" priority/>
         <div className={styles.marke_intro_text}>
           <h1>Get more customers from week 1 </h1>
-          <p>Performance marketing for sustainable London stores, 30-day campaigns that turn attention into visits, enquiries and sales. Risk-free: we cover one month of ad spend if you don’t see measurable results.</p>
+          <p>Performance marketing for businesses in the UK, 30-day campaigns that turn attention into visits, enquiries and sales. Risk-free: we cover one month of ad spend if you don’t see measurable results.</p>
           <div className={styles.marke_button_container}>
             <Link href="/contact" className="marke_button">
               Contact Us
