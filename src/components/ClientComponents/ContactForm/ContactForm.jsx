@@ -37,11 +37,6 @@ useEffect(() => {
   }
 }, [searchParams]);
 
-// log email data whenever it changes
-useEffect(() => {
-  console.log("UPDATED emailData:", emailData);
-}, [emailData]);
-
 // add bot blockers
 
   const sendEmail = (e) => {
