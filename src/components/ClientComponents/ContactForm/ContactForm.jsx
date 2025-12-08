@@ -1,12 +1,14 @@
 "use client";
 
 import styles from "./ContactForm.module.css";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
 
 export default function Contact() {
+  const searchParams = useSearchParams();
   const formRef = useRef();
   const [confirmation, setConfirmation] = useState(false);
   const [emailData, setEmailData] = useState({
@@ -18,7 +20,27 @@ export default function Contact() {
     nume: "",
     telefon: "",
     email: "",
+    client_provider: "",
   });
+
+// check who brings the client
+useEffect(() => {
+  if (searchParams.toString().length === 0) return;
+  const ref = searchParams.get("ref");
+  const isC = searchParams.has("c");
+  const isF = searchParams.has("f");
+
+  if (ref === "c" || isC) {
+    setEmailData(prev => ({ ...prev, client_provider: "Claudiu" }));
+  } else if (ref === "f" || isF) {
+    setEmailData(prev => ({ ...prev, client_provider: "Fabian" }));
+  }
+}, [searchParams]);
+
+// log email data whenever it changes
+useEffect(() => {
+  console.log("UPDATED emailData:", emailData);
+}, [emailData]);
 
 // add bot blockers
 
