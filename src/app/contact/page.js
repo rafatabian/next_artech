@@ -3,6 +3,7 @@ import { RiWhatsappFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
 import dynamic from "next/dynamic";
 import { FaCalendarAlt } from "react-icons/fa";
+import { Suspense } from "react";
 
 // metadata
 export const metadata = {
@@ -52,7 +53,9 @@ export default function Contact() {
 
   return (
       <div className={styles.contact_container}>
+        <Suspense>
           <ContactIntro />
+        </Suspense>
 
         {/* or */}
         <div className={styles.contact_alternative_line}>
