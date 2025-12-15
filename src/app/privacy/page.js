@@ -118,7 +118,7 @@ export default function Privacy() {
     <br />
     Right to Withdraw Consent at any time without affecting prior processing
     <br /><br />
-    For email marketing, you may opt out at any time using the "unsubscribe" link included in every email.
+    For email marketing, you may opt out at any time using the &apos;unsubscribe&apos; link included in every email.
     <br /><br />
     To exercise any of these rights, contact us at:
     <br />

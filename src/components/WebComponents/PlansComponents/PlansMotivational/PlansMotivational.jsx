@@ -14,8 +14,8 @@ const PlansMotivational = () => {
         <div className={styles.plans_motiovational_text}>
           <h1>Ready to Take Your Business to the Next Level?</h1>
           <h2>
-            Choose a plan that fits your goals or if you're unsure, schedule a
-            free consultation and we'll guide you through the best option for
+            Choose a plan that fits your goals or if you&apos;re unsure, schedule a
+            free consultation and we&apos;ll guide you through the best option for
             your business.
           </h2>
           <Link href="/contact" aria-label="contact">

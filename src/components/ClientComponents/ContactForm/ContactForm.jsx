@@ -25,16 +25,26 @@ export default function Contact() {
 
 // check who brings the client
 useEffect(() => {
-  if (searchParams.toString().length === 0) return;
+  if (!searchParams || searchParams.toString().length === 0) return;
+
   const ref = searchParams.get("ref");
   const isC = searchParams.has("c");
   const isF = searchParams.has("f");
 
+  let provider = null;
+
   if (ref === "c" || isC) {
-    setEmailData(prev => ({ ...prev, client_provider: "Claudiu" }));
+    provider = "Claudiu";
   } else if (ref === "f" || isF) {
-    setEmailData(prev => ({ ...prev, client_provider: "Fabian" }));
+    provider = "Fabian";
   }
+
+  if (!provider) return;
+
+  setEmailData(prev => {
+    if (prev.client_provider === provider) return prev;
+    return { ...prev, client_provider: provider };
+  });
 }, [searchParams]);
 
 // add bot blockers
