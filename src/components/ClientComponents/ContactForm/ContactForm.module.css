@@ -70,9 +70,9 @@
     padding: .6rem 1rem;
     font-size: 16px;
 }
-textarea::placeholder{
+/* textarea::placeholder{
   font-family: var(--font-fam);
-}
+} */
 .contact_desctiption > textarea:focus,
 .input:focus,
 .input_date_time:focus{
@@ -129,7 +129,7 @@ textarea::placeholder{
     color: black;
     border: 1px solid rgb(0, 0, 0);
 }
-textarea::placeholder, .input::placeholder, .input_date_time::placeholder{
+/* textarea::placeholder, .input::placeholder, .input_date_time::placeholder{
   color: rgb(77, 77, 77);
-}
+} */
 }
