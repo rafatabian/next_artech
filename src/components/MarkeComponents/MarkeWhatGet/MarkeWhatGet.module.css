@@ -52,13 +52,13 @@
     left: -9px;
 }
 .marke_solution_container div:nth-child(4) > img{
-    left: -28;
+    left: -28px;
 }
 .marke_solution_container div:nth-child(5) > img{
-    left: -18;
+    left: -18px;
 }
 .marke_solution_container div:nth-child(6) > img{
-    left: 18;
+    left: 18px;
 }
 
 .marke_solution > h2{
@@ -120,15 +120,15 @@
     top: -10px;
 }
 .marke_solution_container div:nth-child(4) > img{
-    right: -53;
+    right: -53px;
     top: -20px;
 }
 .marke_solution_container div:nth-child(5) > img{
-    right: -43;
+    right: -43px;
     top: 5px;
 }
 .marke_solution_container div:nth-child(6) > img{
-    right: -6;
+    right: -6px;
     top: 5px;
 }
 }
@@ -164,7 +164,7 @@
     right: -76px;
 }
 .marke_solution_container div:nth-child(4) > img{
-    right: -95;
+    right: -95px;
 }
 .marke_solution_container div:nth-child(5) > img{
     right: -83px;
